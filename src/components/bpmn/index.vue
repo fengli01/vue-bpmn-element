@@ -1,16 +1,13 @@
 <template>
-  <div id="app">
-  </div>
+
 </template>
 
 <script>
-
   export default {
-    name: 'App',
-    components: {}
+    name: "index"
   }
 </script>
 
-<style>
+<style scoped>
 
 </style>
