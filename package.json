@@ -8,11 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "bpmn-js": "^7.2.0",
     "bpmn-js-properties-panel": "^0.33.2",
     "camunda-bpmn-moddle": "^4.4.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
+    "jeeplus-bpmn": "^6.0.9",
     "reset.css": "^2.0.2",
     "vue": "^2.6.11",
     "vue-ace-editor": "^1.0.3",

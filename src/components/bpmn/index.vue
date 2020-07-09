@@ -12,7 +12,8 @@
 
 <script>
   import templateXml from "./data/initxml";
-  import BpmnModeler from 'bpmn-js/lib/Modeler'
+  // import BpmnModeler from 'bpmn-js/lib/Modeler'
+  import BpmnModeler from 'jeeplus-bpmn/lib/Modeler'
   import ViewerHeader from './ViewerHeader'
   import BpmnPanel from "./panel/index";
   import customTranslate from './customTranslate/customTranslate'

@@ -103,5 +103,14 @@ export default {
   'no process or collaboration to display': '没有可显示的流程或协作',
   'element {element} referenced by {referenced}#{property} not yet drawn': '元素 {element} 的引用 {referenced}#{property} 尚未绘制',
   'already rendered {element}': '{element} 已呈现',
-  'failed to import {element}': '{element} 导入失败'
+  'failed to import {element}': '{element} 导入失败',
+
+  'Create StartEvent':'创建开始节点',
+  'Create Intermediate/Boundary Event':'创建中间/边界事件',
+  'Create EndEvent':'创建结束节点',
+  'Create Gateway':'创建网关',
+  'Create Task':'创建任务',
+  'Append ExclusiveGateway':'网关',
+  'Append UserTask':'用户任务',
+  'Append EndEvent':'结束节点'
 };

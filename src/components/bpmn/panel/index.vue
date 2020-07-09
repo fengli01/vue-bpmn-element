@@ -213,10 +213,10 @@
         })
         this.modeler.on("selection.changed", e => {
           const element = e.newSelection[0];
-          _this.modifyConfigTab(element);
           if (!element) {
             return;
           }
+          this.modifyConfigTab(element);
           this.handleFormData(element);
         })
         this.modeler.on("element.changed", e => {
@@ -226,6 +226,14 @@
           }
           this.handleFormData(element);
         });
+        this.modeler.on("element.click", e => {
+          const {element} = e;
+          if(element.type == this.modeler._definitions.rootElements[0].$type){
+            this.modifyConfigTab(0)
+          }else{
+            this.modifyConfigTab(1)
+          }
+        })
       },
       isImplicitRoot(element) {
         return element.id === '__implicitroot';
@@ -242,13 +250,14 @@
           return;
         }
         let businessObject = element.businessObject;
-        console.log(businessObject)
         this.formData = {
           type:element.type,
           id: businessObject.id,
           name: businessObject.name,
           userType:businessObject.$attrs.userType,
-          assignee:businessObject.$attrs.assignee
+          assignee:businessObject.$attrs.assignee,
+          candidateGroups:businessObject.$attrs.candidateGroups,
+          candidateUsers:businessObject.$attrs.candidateUsers?businessObject.$attrs.candidateUsers.split(",") : []
         }
         this.nodeElement = element;
       }

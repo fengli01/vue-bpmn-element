@@ -1782,6 +1782,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bpmn-font@^0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/bpmn-font/-/bpmn-font-0.9.3.tgz#03c2c906dbd30653e5b1f113d92c78cab6710df4"
+  integrity sha512-kzRGXGLzTROLRNCSskkOyj/+SbtTAn2unKfgB9tNt7RWJFybg/Wbe9YjK2ALotI3b64wwlCTkAalXiTiskP6dg==
+
 bpmn-js-properties-panel@^0.33.2:
   version "0.33.2"
   resolved "https://registry.yarnpkg.com/bpmn-js-properties-panel/-/bpmn-js-properties-panel-0.33.2.tgz#b96f6b9bf95c54089000fe2aad02ced96e08f91f"
@@ -1794,12 +1799,12 @@ bpmn-js-properties-panel@^0.33.2:
     scroll-tabs "^1.0.1"
     selection-update "^0.1.2"
 
-bpmn-js@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/bpmn-js/-/bpmn-js-7.2.0.tgz#b4ffb1011252d1ee6df6a336e2daa83a3b1bddb4"
-  integrity sha512-AvgNvYTqJ5EfQjJNWmWkjckVlA8Oc1yX2K2XtbXEeqD4KNjBBL1/5T+qXVaLTaax71DGM7tlxoTT+WuLdTwVdA==
+bpmn-js@^6.0.2:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/bpmn-js/-/bpmn-js-6.5.1.tgz#d0eecba2afeeb430a1c609137e9ef92520a47037"
+  integrity sha512-qmxY+vaFndUa4e65WMjSMUVPDz0qAc79JHODJoLXJBklSS5XatUfqzKR6UGfeT7s0IGA7qje1afMVKMz4YJsEw==
   dependencies:
-    bpmn-moddle "^7.0.3"
+    bpmn-moddle "^6.0.6"
     css.escape "^1.5.1"
     diagram-js "^6.6.1"
     diagram-js-direct-editing "^1.6.1"
@@ -1810,14 +1815,14 @@ bpmn-js@^7.2.0:
     object-refs "^0.3.0"
     tiny-svg "^2.2.1"
 
-bpmn-moddle@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/bpmn-moddle/-/bpmn-moddle-7.0.3.tgz#d6ce6045d9e4eebd0f0eaafd8f33cd42bc9c7180"
-  integrity sha512-DylEgndbBNm37v/jEdZTUD1i7XzbpCA5mIAFqkbqof3nYbIOAIycIrkhnRIaBJPvtlxTd3wDdG1ts1IzUfEduA==
+bpmn-moddle@^6.0.0, bpmn-moddle@^6.0.6:
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/bpmn-moddle/-/bpmn-moddle-6.0.7.tgz#416dfbd0d6e8923711c919d015a7345f7abac20b"
+  integrity sha512-MD649c7/I7+AKl3OGLs8ed8guzKuIRIJhOvLeVBSyCHtd41iB8ZRi+NL2UeC8pNgpqcjMsZG3ye++x3fh6MQ+g==
   dependencies:
     min-dash "^3.0.0"
     moddle "^5.0.1"
-    moddle-xml "^9.0.3"
+    moddle-xml "^8.0.8"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -3003,7 +3008,7 @@ diagram-js-direct-editing@^1.6.1:
     min-dash "^3.0.0"
     min-dom "^3.0.0"
 
-diagram-js@^6.6.1:
+diagram-js@^6.0.2, diagram-js@^6.6.1:
   version "6.6.1"
   resolved "https://registry.yarnpkg.com/diagram-js/-/diagram-js-6.6.1.tgz#9f802fcbe651ed406ca766815cd20519c37403a0"
   integrity sha512-3SlXwT2ieXCZkQn8dVZWfNry9+6d4R+0Q57Oz9t/SfIyNIrRPg0c9IlsaTHpGUhPE3fossXPDjmvqjJD0lmBLw==
@@ -4836,6 +4841,24 @@ javascript-stringify@^2.0.1:
   resolved "https://registry.yarnpkg.com/javascript-stringify/-/javascript-stringify-2.0.1.tgz#6ef358035310e35d667c675ed63d3eb7c1aa19e5"
   integrity sha512-yV+gqbd5vaOYjqlbk16EG89xB5udgjqQF3C5FAORDg4f/IS1Yc5ERCv5e/57yBcfJYw05V5JyIXabhwb75Xxow==
 
+jeeplus-bpmn@^6.0.9:
+  version "6.0.9"
+  resolved "https://registry.yarnpkg.com/jeeplus-bpmn/-/jeeplus-bpmn-6.0.9.tgz#75f92e64e660ba9ce9d931e43a2ca013605a5cf2"
+  integrity sha512-FthGj1gKtpNX6ExRd0pElyLHPxd5Ft2bAEtYMYgSaNOxS92v02/n9ED4zRqLfxqmZu0QS7rT3Ou1JoZJgfYDHA==
+  dependencies:
+    bpmn-font "^0.9.3"
+    bpmn-js "^6.0.2"
+    bpmn-moddle "^6.0.0"
+    css.escape "^1.5.1"
+    diagram-js "^6.0.2"
+    diagram-js-direct-editing "^1.6.1"
+    ids "^1.0.0"
+    inherits "^2.0.1"
+    min-dash "^3.5.1"
+    min-dom "^3.0.0"
+    object-refs "^0.3.0"
+    tiny-svg "^2.2.1"
+
 jest-worker@^25.4.0:
   version "25.5.0"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-25.5.0.tgz#2611d071b79cea0f43ee57a3d118593ac1547db1"
@@ -5409,10 +5432,10 @@ mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-moddle-xml@^9.0.3:
-  version "9.0.3"
-  resolved "https://registry.yarnpkg.com/moddle-xml/-/moddle-xml-9.0.3.tgz#e17843bf7dc7c23c6466dbca08482546c16f52af"
-  integrity sha512-3r1c+CA7k9GLqONKtM87DltyLmeWtqz6wbw+SQWNJd66iidmYL4VudN/qpJHt6TP8qxeQrZLTpEYkDQgW6HIDQ==
+moddle-xml@^8.0.8:
+  version "8.0.8"
+  resolved "https://registry.yarnpkg.com/moddle-xml/-/moddle-xml-8.0.8.tgz#f14193394be8e1c5f6d1c0f892dee57523d41416"
+  integrity sha512-JzW8wUCH7Qze7eh0T8A1exi7QJg6hRgq+uw8goHNP5Q7pWTGrLj83S+NgA/94M2I0JmqnK9hw3sCbyiKVOjc4Q==
   dependencies:
     min-dash "^3.0.0"
     moddle "^5.0.1"
