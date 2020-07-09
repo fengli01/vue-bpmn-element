@@ -1782,6 +1782,18 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bpmn-js-properties-panel@^0.33.2:
+  version "0.33.2"
+  resolved "https://registry.yarnpkg.com/bpmn-js-properties-panel/-/bpmn-js-properties-panel-0.33.2.tgz#b96f6b9bf95c54089000fe2aad02ced96e08f91f"
+  integrity sha512-+13NONRG1sJgcNgsN5ZWYbyAA1LYO1eOvTRx62IfjieMzDhDLRCmP4YLkPIWG4NhKdAIRfUf9/JxI1uwZd5rhQ==
+  dependencies:
+    ids "^1.0.0"
+    inherits "^2.0.1"
+    lodash "^4.17.15"
+    min-dom "^3.1.1"
+    scroll-tabs "^1.0.1"
+    selection-update "^0.1.2"
+
 bpmn-js@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/bpmn-js/-/bpmn-js-7.2.0.tgz#b4ffb1011252d1ee6df6a336e2daa83a3b1bddb4"
@@ -1814,6 +1826,18 @@ brace-expansion@^1.1.7:
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
+
+brace@^0.11.0:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/brace/-/brace-0.11.1.tgz#4896fcc9d544eef45f4bb7660db320d3b379fe58"
+  integrity sha1-SJb8ydVE7vRfS7dmDbMg07N5/lg=
+
+brace@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/brace/-/brace-0.8.0.tgz#e826c6d5054cae5f607ad7b1c81236dd2cf01978"
+  integrity sha1-6CbG1QVMrl9getexyBI23SzwGXg=
+  dependencies:
+    w3c-blob "0.0.1"
 
 braces@^2.3.1, braces@^2.3.2:
   version "2.3.2"
@@ -2071,6 +2095,13 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
+
+camunda-bpmn-moddle@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/camunda-bpmn-moddle/-/camunda-bpmn-moddle-4.4.0.tgz#2daeab766e198c56f1b0bdccf71b2bd707dc5d8d"
+  integrity sha512-jhtbPk7AXJNig/1040OWk75xn6dXs+NRQXx0HTf4er+NsQsNIIyuB3Nfm+rmyQSLhIc58Pi9QD4/aAfP97OvEg==
+  dependencies:
+    min-dash "^3.0.0"
 
 caniuse-api@^3.0.0:
   version "3.0.0"
@@ -3177,6 +3208,10 @@ elliptic@^6.0.0, elliptic@^6.5.2:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
+
+"emmet@git+https://github.com/cloud9ide/emmet-core.git#41973fcc70392864c7a469cf5dcd875b88b93d4a":
+  version "0.0.1"
+  resolved "git+https://github.com/cloud9ide/emmet-core.git#41973fcc70392864c7a469cf5dcd875b88b93d4a"
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -5263,12 +5298,12 @@ mimic-fn@^2.1.0:
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
 
-min-dash@^3.0.0, min-dash@^3.5.0, min-dash@^3.5.1:
+min-dash@^3.0.0, min-dash@^3.1.0, min-dash@^3.5.0, min-dash@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/min-dash/-/min-dash-3.5.2.tgz#23786fa289116ba3656038e16511577413d27200"
   integrity sha512-YVbJZUtnzT5QsgJUp9H9uyJTW6NJgswFqI27RI/+MSox860uIjaGMbSQBftEzbMXiJVRG24hpoIh3SG666SHgA==
 
-min-dom@^3.0.0, min-dom@^3.1.2:
+min-dom@^3.0.0, min-dom@^3.1.0, min-dom@^3.1.1, min-dom@^3.1.2:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/min-dom/-/min-dom-3.1.3.tgz#6d3f4092439c80d13df52ac98d6a7d5fe92bfdbd"
   integrity sha512-Lbi1NZjLV9Hg6/bEe2Lfk2Fzsv1MwheR61whqTLP+FxLndYo9TxpksEgM5Kr1khjfCtFTMr0waeEfwIpStkRdw==
@@ -5353,6 +5388,11 @@ mississippi@^3.0.0:
     pumpify "^1.3.3"
     stream-each "^1.1.0"
     through2 "^2.0.0"
+
+mitt@^1.1.3:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mitt/-/mitt-1.2.0.tgz#cb24e6569c806e31bd4e3995787fe38a04fdf90d"
+  integrity sha512-r6lj77KlwqLhIUku9UWYes7KJtsczvolZkzp8hbaDPPaE24OmWl5s539Mytlj22siEQKosZ26qCBgda2PKwoJw==
 
 mixin-deep@^1.2.0:
   version "1.3.2"
@@ -6810,6 +6850,11 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
+reset.css@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/reset.css/-/reset.css-2.0.2.tgz#9c01309c820b72e8f219ebcc8e1411949604f7d7"
+  integrity sha1-nAEwnIILcujyGevMjhQRlJYE99c=
+
 resize-observer-polyfill@^1.5.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
@@ -6971,10 +7016,24 @@ schema-utils@^2.0.0, schema-utils@^2.5.0, schema-utils@^2.6.5, schema-utils@^2.6
     ajv "^6.12.2"
     ajv-keywords "^3.4.1"
 
+scroll-tabs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/scroll-tabs/-/scroll-tabs-1.0.1.tgz#bac04e4a1725e8a03344bae644dd6d7cdc192452"
+  integrity sha512-W4xjEwNS4QAyQnaJ450vQTcKpbnalBAfsTDV926WrxEMOqjyj2To8uv2d0Cp0oxMdk5TkygtzXmctPNc2zgBcg==
+  dependencies:
+    min-dash "^3.1.0"
+    min-dom "^3.1.0"
+    mitt "^1.1.3"
+
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
   integrity sha1-Yl2GWPhlr0Psliv8N2o3NZpJlMo=
+
+selection-update@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/selection-update/-/selection-update-0.1.2.tgz#803a044dcc6edab5a3ae648f5f0357e89ad66b96"
+  integrity sha1-gDoETcxu2rWjrmSPXwNX6JrWa5Y=
 
 selfsigned@^1.10.7:
   version "1.10.7"
@@ -8046,6 +8105,14 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
+vue-ace-editor@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vue-ace-editor/-/vue-ace-editor-1.0.3.tgz#b80699f4d62ff360316edff607159fb1044fbbda"
+  integrity sha1-uAaZ9NYv82Axbt/2BxWfsQRPu9o=
+  dependencies:
+    brace "^0.8.0"
+    emmet "git+https://github.com/cloud9ide/emmet-core.git#41973fcc70392864c7a469cf5dcd875b88b93d4a"
+
 vue-eslint-parser@^7.0.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-7.1.0.tgz#9cdbcc823e656b087507a1911732b867ac101e83"
@@ -8095,10 +8162,22 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
+vue2-ace-editor@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/vue2-ace-editor/-/vue2-ace-editor-0.0.15.tgz#569b208e54ae771ae1edd3b8902ac42f0edc74e3"
+  integrity sha512-e3TR9OGXc71cGpvYcW068lNpRcFt3+OONCC81oxHL/0vwl/V3OgqnNMw2/RRolgQkO/CA5AjqVHWmANWKOtNnQ==
+  dependencies:
+    brace "^0.11.0"
+
 vue@^2.6.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
+
+w3c-blob@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/w3c-blob/-/w3c-blob-0.0.1.tgz#b0cd352a1a50f515563420ffd5861f950f1d85b8"
+  integrity sha1-sM01KhpQ9RVWNCD/1YYflQ8dhbg=
 
 watchpack-chokidar2@^2.0.0:
   version "2.0.0"
