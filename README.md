@@ -10,11 +10,11 @@ yarn serve
 yarn build
 ```
 ## 调整后的截图
-![UI布局](./doc/pic1.png)
+![UI布局](http://47.108.140.13/images/pic1.png)
 ---
-![UI布局](./doc/pic2.png)
+![UI布局](http://47.108.140.13/images/pic2.png)
 ---
-![UI布局](./doc/pic3.png)
+![UI布局](http://47.108.140.13/images/pic3.png)
 ---
 
 ## 在线demo
