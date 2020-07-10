@@ -3,11 +3,14 @@
     <el-container>
       <el-header height="45px">
         <div class="config-tab" :class="{active: configTab=='node'}" @click="handleConfigSelect('node')">节点属性</div>
-        <div class="config-tab" :class="{active: configTab=='process'}" @click="handleConfigSelect('process')">流程属性</div>
+        <div class="config-tab" :class="{active: configTab=='process'}" @click="handleConfigSelect('process')">流程属性
+        </div>
       </el-header>
       <el-main>
-        <node-property-panel v-if="configTab=='node'" :modeler="modeler" @modifyConfigTab="modifyConfigTab" :nodeElement="nodeElement" :formData="formData"></node-property-panel>
-        <process-property-panel v-if="configTab=='process'" :modeler="modeler" :process-data="process" :element="element"></process-property-panel>
+        <node-property-panel v-if="configTab=='node'" :modeler="modeler" @modifyConfigTab="modifyConfigTab"
+                             :nodeElement="nodeElement" :formData="formData"></node-property-panel>
+        <process-property-panel v-if="configTab=='process'" :modeler="modeler" :process-data="process"
+                                :element="element"></process-property-panel>
       </el-main>
     </el-container>
     <!-- 流程属性 -->
@@ -169,15 +172,16 @@
 <script>
   import NodePropertyPanel from "./NodePropertyPanel";
   import ProcessPropertyPanel from "./ProcessPropertyPanel";
+
   export default {
     name: "index",
     data() {
       return {
         configTab: 'node',
-        panelIndex:8,
-        element:null,
+        panelIndex: 8,
+        element: null,
         nodeElement: {},
-        formData:{}
+        formData: {}
       }
     },
     props: {
@@ -185,7 +189,7 @@
         type: Object,
         required: true
       },
-      process:{
+      process: {
         type: Object,
         required: true
       }
@@ -207,8 +211,8 @@
           this.element = element;
         });
         this.modeler.on("commandStack.changed", () => {
-          _this.modeler.saveXML({format: true}, function(err, xml) {
-            _this.$emit('updateXml',xml)
+          _this.modeler.saveXML({format: true}, function (err, xml) {
+            _this.$emit('updateXml', xml)
           });
         })
         this.modeler.on("selection.changed", e => {
@@ -228,9 +232,9 @@
         });
         this.modeler.on("element.click", e => {
           const {element} = e;
-          if(element.type == this.modeler._definitions.rootElements[0].$type){
+          if (element.type == this.modeler._definitions.rootElements[0].$type) {
             this.modifyConfigTab(0)
-          }else{
+          } else {
             this.modifyConfigTab(1)
           }
         })
@@ -238,32 +242,33 @@
       isImplicitRoot(element) {
         return element.id === '__implicitroot';
       },
-      modifyConfigTab(element){
+      modifyConfigTab(element) {
         let configTab = 'node'
-        if(!element){
+        if (!element) {
           configTab = 'process'
         }
         this.configTab = configTab
       },
-      handleFormData(element){
-        if(!element.id){
+      handleFormData(element) {
+        if (!element.id) {
           return;
         }
         let businessObject = element.businessObject;
         this.formData = {
-          type:element.type,
+          type: element.type,
           id: businessObject.id,
           name: businessObject.name,
-          userType:businessObject.$attrs.userType,
-          assignee:businessObject.$attrs.assignee,
-          candidateGroups:businessObject.$attrs.candidateGroups,
-          candidateUsers:businessObject.$attrs.candidateUsers?businessObject.$attrs.candidateUsers.split(",") : []
+          userType: businessObject.$attrs.userType,
+          assignee: businessObject.$attrs.assignee,
+          candidateGroups: businessObject.$attrs.candidateGroups,
+          candidateUsers: businessObject.$attrs.candidateUsers ? businessObject.$attrs.candidateUsers.split(",") : [],
+          sequenceFlow: businessObject.conditionExpression ? businessObject.conditionExpression.body : ''
         }
         this.nodeElement = element;
       }
     },
-    components:{
-      NodePropertyPanel,ProcessPropertyPanel
+    components: {
+      NodePropertyPanel, ProcessPropertyPanel
     }
   }
 </script>
@@ -275,7 +280,7 @@
     padding: 0 5px;
   }
 
-  .el-header{
+  .el-header {
     border-bottom: solid 2px #e4e7ed;
     padding: 0;
   }
@@ -291,7 +296,8 @@
     position: relative;
     cursor: pointer;
   }
-  .config-tab.active{
-     border-bottom: solid 2px #409EFF;
-   }
+
+  .config-tab.active {
+    border-bottom: solid 2px #409EFF;
+  }
 </style>

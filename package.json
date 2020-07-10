@@ -8,8 +8,6 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "bpmn-js-properties-panel": "^0.33.2",
-    "camunda-bpmn-moddle": "^4.4.0",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "jeeplus-bpmn": "^6.0.9",

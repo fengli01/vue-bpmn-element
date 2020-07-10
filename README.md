@@ -1,24 +1,21 @@
-# vue-bpmn-element
-
-## Project setup
+# bpmn.js流程设计器组件
+```
+1、调整设计器UI布局，基于vue-elementui美化属性面板
+2、支持设置任务变量、表达式、分支条件等，满足90%以上的业务需求
+```
+## 安装运行
 ```
 yarn install
-```
-
-### Compiles and hot-reloads for development
-```
 yarn serve
-```
-
-### Compiles and minifies for production
-```
 yarn build
 ```
+## 调整后的截图
+![UI布局](./doc/pic1.png)
+---
+![UI布局](./doc/pic2.png)
+---
+![UI布局](./doc/pic3.png)
+---
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 在线demo
+查看 [在线demo](http://47.108.140.13/bpmn/)

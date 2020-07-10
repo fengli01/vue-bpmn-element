@@ -42,3 +42,11 @@
 .el-select--small{
     width: 100%;
 }
+.el-dialog > .el-dialog__header{
+    padding: 5px 20px  ;
+}
+.el-dialog > .el-dialog__body{
+    padding: 0px;
+    margin: 0 20px;
+    border: 1px solid #cccccc;
+}

@@ -67,6 +67,10 @@
           ></el-option>
         </el-select>
       </el-form-item>
+      <!--sequenceFlow-->
+      <el-form-item v-if="formData.type=='bpmn:SequenceFlow'" label="分支条件">
+        <el-input v-model="formData.sequenceFlow" @input="updateSequenceFlow"></el-input>
+      </el-form-item>
     </el-form>
   </div>
 </template>
@@ -78,6 +82,9 @@
       return {
         bpmnData: {
           assignees: [{
+            value: "${assignee}",
+            label: "表达式"
+          }, {
             value: "zhangsan",
             label: "张三"
           }, {
@@ -128,6 +135,18 @@
         required: true
       }
     },
+    watch:{
+      nodeElement:{
+        handler(){
+          if(this.nodeElement.type=="bpmn:StartEvent"){
+            this.updateName("开始");
+          }
+          if(this.nodeElement.type=="bpmn:EndEvent"){
+            this.updateName("结束");
+          }
+        }
+      }
+    },
     methods: {
       updateProperties(properties){
         this.modeler.get("modeling").updateProperties(this.nodeElement, properties);
@@ -136,14 +155,17 @@
         this.updateProperties({id: name});
       },
       updateName(name) {
-        // this.modeler.get("modeling").updateProperties(this.nodeElement, {name: name});
         this.updateProperties({name: name});
       },
       changeUserType() {
-        // console.log(val)
+      },
+      updateSequenceFlow(val){
+        let newCondition = this.modeler.get("moddle").create('bpmn:FormalExpression', {
+          body: val
+        });
+        this.updateProperties({conditionExpression:newCondition});
       },
       addUser(properties){
-        console.log(properties)
         this.updateProperties(
           Object.assign(properties, {
             userType: Object.keys(properties)[0]
