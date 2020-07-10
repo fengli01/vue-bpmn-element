@@ -18,4 +18,5 @@ yarn build
 ---
 
 ## 在线demo
-查看 [在线demo](http://47.108.140.13/bpmn/)
+##### 在线demo: [http://47.108.140.13/bpmn/](http://47.108.140.13/bpmn/)
+##### 欢迎转载，转载请注明网址：https://github.com/fengli01/vue-bpmn-element.git
