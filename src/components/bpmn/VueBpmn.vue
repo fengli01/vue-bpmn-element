@@ -1,24 +1,25 @@
 <template>
   <div class="container">
     <div class="bpmn-viewer">
-      <vue-header class="bpmn-viewer-header" :processData="initData" @handleExportXmlAction="handleExportXmlAction"
-                     @handleExportBpmnAction="handleExportBpmnAction"
-                     @handleExportSvgAction="handleExportSvgAction"></vue-header>
+      <vue-header class="bpmn-viewer-header" :processData="initData" :modeler="bpmnModeler"></vue-header>
       <div class="bpmn-viewer-container">
         <div class="bpmn-viewer-content" ref="bpmnViewer"></div>
       </div>
     </div>
-<!--    <bpmn-panel v-if="bpmnModeler" :modeler="bpmnModeler" :process="initData" @updateXml="updateXml"></bpmn-panel>-->
+    <bpmn-panel></bpmn-panel>
   </div>
 </template>
 
 <script>
-  import templateXml from "./bpmn/data/initxml";
+  import templateXml from "./data/initxml";
   import BpmnModeler from 'jeeplus-bpmn/lib/Modeler'
-  import customTranslate from "./bpmn/customTranslate/customTranslate";
+  import customTranslate from "./customTranslate/customTranslate";
   import VueHeader from "./Header";
+  import BpmnPanel from "./Panel";
 
-  import './bpmn/vue-bmpn.css'
+  import './assets/css/vue-bmpn.css'
+  import './assets/css/font-awesome.min.css'
+
   export default {
     name: "VueBpmn",
     data() {
@@ -28,8 +29,8 @@
         initData: {}
       }
     },
-    components:{
-      VueHeader
+    components: {
+      VueHeader,BpmnPanel
     },
     created() {
       let processId = new Date().getTime();
@@ -39,7 +40,7 @@
     mounted() {
       this.init();
     },
-    methods:{
+    methods: {
       init() {
         // 获取画布 element
         this.canvas = this.$refs.bpmnViewer;

@@ -1,4 +1,4 @@
-import VueBpmn from "./components/VueBpmn.vue";
+import VueBpmn from "./components/bpmn/VueBpmn.vue";
 
 const components = [VueBpmn];
 
