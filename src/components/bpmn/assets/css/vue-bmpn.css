@@ -33,7 +33,9 @@
 .el-collapse-item__header{
     padding-left: 15px;
 }
-
+.djs-direct-editing-parent{
+    display: none;
+}
 .bpmn-panel {
     width: 370px;
     border: 1px solid #eeeeee;
@@ -49,4 +51,7 @@
     padding: 0px;
     margin: 0 20px;
     border: 1px solid #cccccc;
+}
+.default-undo{
+    color: #c0c4cc;
 }

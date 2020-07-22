@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import VueBpmn from './components/bpmn/index'
+  import VueBpmn from './components/bpmn/VueBpmn'
   export default {
     name: 'App',
     components: {
