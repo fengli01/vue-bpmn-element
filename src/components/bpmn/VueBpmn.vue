@@ -122,6 +122,10 @@
         }
       },
       restart(){
+        let _tag = document.getElementsByClassName("djs-direct-editing-parent")[0];
+        if(_tag){
+          _tag.style.display = "none";
+        }
         let processId = new Date().getTime();
         this.initTemplate = templateXml.initTemplate(processId)
         this.initData = {key: "process" + processId, name: "流程" + processId, xml: this.initTemplate}

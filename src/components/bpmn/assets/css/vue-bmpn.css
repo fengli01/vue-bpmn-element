@@ -34,7 +34,7 @@
     padding-left: 15px;
 }
 .djs-direct-editing-parent{
-    display: none;
+    /*display: none;*/
 }
 .bpmn-panel {
     width: 370px;
