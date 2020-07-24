@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <div class="bpmn-viewer">
-      <vue-header class="bpmn-viewer-header" :processData="initData" :modeler="bpmnModeler" @restart="restart" @handleExportSvg="handleExportSvg" @handleExportBpmn="handleExportBpmn"></vue-header>
+      <vue-header class="bpmn-viewer-header" :processData="initData" :modeler="bpmnModeler" @restart="restart"
+                  @handleExportSvg="handleExportSvg" @handleExportBpmn="handleExportBpmn"></vue-header>
       <div class="bpmn-viewer-container">
         <div class="bpmn-viewer-content" ref="bpmnViewer"></div>
       </div>
@@ -11,12 +12,13 @@
 </template>
 
 <script>
-  import templateXml from "./data/initxml";
+  import templateXml from "./data/template";
   import BpmnModeler from 'jeeplus-bpmn/lib/Modeler'
-  import customTranslate from "./customTranslate/customTranslate";
+  import customTranslate from "./data/translate/customTranslate";
   import VueHeader from "./Header";
   import BpmnPanel from "./panel/index";
-
+  import activitiModele from './data/activiti.json'
+  import flowableModdle from './data/flowable.json'
   import './assets/css/vue-bmpn.css'
   import './assets/css/font-awesome.min.css'
 
@@ -29,8 +31,11 @@
         initData: {}
       }
     },
+    props: {
+      product: String
+    },
     components: {
-      VueHeader,BpmnPanel
+      VueHeader, BpmnPanel
     },
     mounted() {
       let processId = new Date().getTime();
@@ -40,6 +45,8 @@
     },
     methods: {
       init() {
+        // 支持activiti和flowable
+        let _moddleExtensions = this.getModdleExtensions();
         // 获取画布 element
         this.canvas = this.$refs.bpmnViewer;
         // 创建Bpmn对象
@@ -49,7 +56,8 @@
             {
               translate: ['value', customTranslate]
             }
-          ]
+          ],
+          moddleExtensions: _moddleExtensions
         });
 
         // 初始化建模器内容
@@ -62,7 +70,7 @@
           }
         });
       },
-      handleExportBpmn(){
+      handleExportBpmn() {
         const _this = this;
         this.bpmnModeler.saveXML(function (err, xml) {
           if (err) {
@@ -121,15 +129,29 @@
           }
         }
       },
-      restart(){
+      restart() {
         let _tag = document.getElementsByClassName("djs-direct-editing-parent")[0];
-        if(_tag){
+        if (_tag) {
           _tag.style.display = "none";
         }
         let processId = new Date().getTime();
         this.initTemplate = templateXml.initTemplate(processId)
         this.initData = {key: "process" + processId, name: "流程" + processId, xml: this.initTemplate}
         this.initDiagram(this.initTemplate)
+      },
+      getModdleExtensions() {
+        let moddleExtensions = {};
+        if (this.product == "flowable") {
+          moddleExtensions = {
+            flowable: flowableModdle
+          }
+        }
+        if (this.product == "activiti") {
+          moddleExtensions = {
+            activiti: activitiModele
+          }
+        }
+        return moddleExtensions;
       }
     }
   }
