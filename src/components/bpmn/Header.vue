@@ -74,7 +74,6 @@
           }
           _svg = svg;
         })
-        console.log(this.Apis)
         that.post(this.Apis.deployProcess, {
           processKey: "s1111",
           processName: "阿达达",
