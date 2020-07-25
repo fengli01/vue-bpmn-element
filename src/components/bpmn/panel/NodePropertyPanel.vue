@@ -168,7 +168,7 @@
       addUser(properties){
         this.updateProperties(
           Object.assign(properties, {
-            userType: Object.keys(properties)[0]
+            // userType: Object.keys(properties)[0]
           })
         );
       }

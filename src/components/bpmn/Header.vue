@@ -2,7 +2,7 @@
   <div>
     <el-button-group>
       <el-tooltip class="item" effect="dark" content="保存并发布" placement="bottom">
-        <el-button type="primary" size="mini"><i class="fa fa-save"> 保存并发布</i></el-button>
+        <el-button type="primary" size="mini" @click="deploy"><i class="fa fa-save"> 保存并发布</i></el-button>
       </el-tooltip>
       <el-tooltip class="item" effect="dark" content="保存草稿" placement="bottom">
         <el-button type="primary" size="mini"><i class="fa fa-save"> 保存草稿</i></el-button>
@@ -58,6 +58,33 @@
     },
     components: {},
     methods: {
+      deploy() {
+        let that = this;
+        let _xml;
+        let _svg;
+        this.modeler.saveXML((err, xml) => {
+          if (err) {
+            console.error(err)
+          }
+          _xml = xml;
+        })
+        this.modeler.saveSVG((err, svg) => {
+          if (err) {
+            console.error(err)
+          }
+          _svg = svg;
+        })
+        console.log(this.Apis)
+        that.post(this.Apis.deployProcess, {
+          processKey: "s1111",
+          processName: "阿达达",
+          resourceName: "test01",
+          xml: _xml,
+          svg: _svg
+        }, function (data) {
+          console.log(data)
+        });
+      },
       reset() {
         this.$emit('restart')
       },
