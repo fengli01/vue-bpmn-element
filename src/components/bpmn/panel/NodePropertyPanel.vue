@@ -166,11 +166,11 @@
         this.updateProperties({conditionExpression:newCondition});
       },
       addUser(properties){
-        this.updateProperties(
-          Object.assign(properties, {
-            // userType: Object.keys(properties)[0]
-          })
-        );
+        this.updateProperties(properties);
+        Object.assign(properties, {
+          userType: Object.keys(properties)[0]
+        })
+        this.$emit('modifyFormData',properties);
       }
     }
   }

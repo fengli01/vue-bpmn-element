@@ -8,7 +8,7 @@
       </el-header>
       <el-main>
         <node-property-panel v-if="configTab=='node'" :modeler="modeler" @modifyConfigTab="modifyConfigTab"
-                             :nodeElement="nodeElement" :formData="formData"></node-property-panel>
+                             :nodeElement="nodeElement" :formData="formData" @modifyFormData="modifyFormData"></node-property-panel>
         <process-property-panel v-if="configTab=='process'" :modeler="modeler" :process-data="process"
                                 :element="element"></process-property-panel>
       </el-main>
@@ -265,6 +265,10 @@
           sequenceFlow: businessObject.conditionExpression ? businessObject.conditionExpression.body : ''
         }
         this.nodeElement = element;
+      },
+      modifyFormData(data){
+        this.formData.assignee = data.assignee;
+        console.log(data)
       }
     },
     components: {

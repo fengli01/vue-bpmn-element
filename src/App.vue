@@ -11,7 +11,8 @@
     name: 'App',
     data(){
       return {
-        product:"flowable"
+        // product:"flowable"
+        product:"activiti"
       }
     },
     components: {
