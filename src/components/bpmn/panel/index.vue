@@ -236,6 +236,13 @@
             this.modifyConfigTab(0)
           } else {
             this.modifyConfigTab(1)
+            if(element.type == "bpmn:UserTask"){
+              let _businessObject = element.businessObject;
+              if(_businessObject.assignee){
+                _this.formData.userType = "assignee";
+                _this.formData.assignee = _businessObject.assignee;
+              }
+            }
           }
         })
       },
@@ -268,7 +275,7 @@
       },
       modifyFormData(data){
         this.formData.assignee = data.assignee;
-        console.log(data)
+        this.formData.userType = data.userType;
       }
     },
     components: {
