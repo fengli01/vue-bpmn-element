@@ -2,7 +2,7 @@
   <div class="container">
     <div class="bpmn-viewer">
       <vue-header class="bpmn-viewer-header" :processData="initData" :modeler="bpmnModeler" @restart="restart"
-                  @handleExportSvg="handleExportSvg" @handleExportBpmn="handleExportBpmn"></vue-header>
+                  @handleExportSvg="handleExportSvg" @handleExportBpmn="handleExportBpmn" @processSave="processSave"></vue-header>
       <div class="bpmn-viewer-container">
         <div class="bpmn-viewer-content" ref="bpmnViewer"></div>
       </div>
@@ -128,6 +128,9 @@
             }
           }
         }
+      },
+      processSave(data){
+        this.$emit("processSave",data);
       },
       restart() {
         let _tag = document.getElementsByClassName("djs-direct-editing-parent")[0];

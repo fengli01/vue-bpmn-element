@@ -15,7 +15,9 @@
     "reset.css": "^2.0.2",
     "vue": "^2.6.11",
     "vue-ace-editor": "^1.0.3",
-    "vue2-ace-editor": "^0.0.15"
+    "vue-router": "^3.4.0",
+    "vue2-ace-editor": "^0.0.15",
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

@@ -58,6 +58,7 @@ function callServer(options, success, that) {
   axios(options).then((respose) => {
     handler(respose, success)
   }).catch(reason => {
+    console.log(reason)
     that.$message.error("" + reason);
   })
 }
