@@ -9,3 +9,11 @@
     name: 'app'
   }
 </script>
+
+<style>
+  .toolbar {
+    height: 50px;
+    line-height: 50px;
+    background-color: #ffffff;
+  }
+</style>

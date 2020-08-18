@@ -130,6 +130,9 @@
         }
       },
       processSave(data){
+        let initData = this.initData;
+        data.procId = initData.key;
+        data.name = initData.name;
         this.$emit("processSave",data);
       },
       restart() {

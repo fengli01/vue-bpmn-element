@@ -4,8 +4,17 @@
       <el-table-column v-for="(item,index) in columns" :key="index" :prop="item.key"
                        :label="item.title" :formatter="item.formatter">
         <template slot-scope="scope">
-          <div v-if="item.formatter" v-html="item.formatter(scope.row,item.key,scope.row[item.key],index)"></div>
-          <div v-else>{{scope.row[item.key]}}</div>
+          <div v-if="item.operator">
+            <template v-for="(o,key) in item.operator">
+              <el-button :type="o.type" :key="key" @click="o.click(scope.row)"
+                         size="small" v-if="!o.hidden || !o.hidden(scope.row)">{{o.name}}
+              </el-button>
+            </template>
+          </div>
+          <div v-else>
+            <span v-if="!item.formatter">{{scope.row[item.key]}}</span>
+            <span v-else v-html="item.formatter(scope.row,item.key,scope.row[item.key],index)"></span>
+          </div>
         </template>
       </el-table-column>
     </el-table>
@@ -24,7 +33,9 @@
     name: "ElementTable",
     data() {
       return {
-        data: {},
+        data: {
+          total: 0
+        },
         page: 1
       }
     },
@@ -41,11 +52,20 @@
     },
     methods: {
       reload(page) {
+        if (!this.url) {
+          return;
+        }
         let that = this;
         this.page = page;
         this.get(this.url, {page: this.page, pageSize: this.pageSize}, res => {
           that.data = res.data;
         })
+      },
+      deploy(row) {
+        console.log(row)
+      },
+      open() {
+        console.log("d")
       }
     }
   }

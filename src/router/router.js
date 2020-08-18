@@ -63,18 +63,25 @@ export const appRouter = [{
 },
   {
     path: '/process',
-    icon: 'el-icon-s-help',
+    icon: 'el-icon-s-finance',
     name: 'process',
     title: '流程管理',
     access: 0,
     component: Main,
     children: [{
       path: 'design',
-      icon: 'el-icon-s-help',
+      icon: 'el-icon-s-ticket',
       name: 'design',
       title: '流程设计',
       component: () =>
         import ('../views/process/design')
+    },{
+      path: 'inst',
+      icon: 'el-icon-s-claim',
+      name: 'inst',
+      title: '流程实例',
+      component: () =>
+        import ('../views/process/inst')
     }]
   }
 ]
