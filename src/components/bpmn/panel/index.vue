@@ -286,7 +286,7 @@
 
 <style scoped>
   .bpmn-panel {
-    width: 390px;
+    width: 350px;
     border: 1px solid #eeeeee;
     padding: 0 5px;
   }

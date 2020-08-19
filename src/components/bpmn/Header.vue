@@ -5,7 +5,7 @@
         <el-button type="primary" size="mini" @click="deploy"><i class="fa fa-save"> 保存并发布</i></el-button>
       </el-tooltip>
       <el-tooltip class="item" effect="dark" content="保存草稿" placement="bottom">
-        <el-button type="primary" size="mini"><i class="fa fa-save"> 保存草稿</i></el-button>
+        <el-button type="primary" size="mini" @click="save"><i class="fa fa-save"> 保存草稿</i></el-button>
       </el-tooltip>
       <el-tooltip class="item" effect="dark" content="打开流程文件" placement="bottom">
         <el-button type="primary" size="mini"><i class="fa fa-folder-open"></i></el-button>
@@ -83,6 +83,24 @@
         }, function (data) {
           console.log(data)
         });
+      },
+      save(){
+        let that = this;
+        let _xml;
+        let _svg;
+        this.modeler.saveXML((err, xml) => {
+          if (err) {
+            console.error(err)
+          }
+          _xml = xml;
+        })
+        this.modeler.saveSVG((err, svg) => {
+          if (err) {
+            console.error(err)
+          }
+          _svg = svg;
+        })
+        that.$emit("processSave",{"xmlStr":_xml,"svgStr":_svg});
       },
       reset() {
         this.$emit('restart')

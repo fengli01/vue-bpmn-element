@@ -34,6 +34,9 @@ export default {
       }
       callServer(_options, success, this);
     }
+    Vue.prototype.getCallUrl = function (url) {
+      return baseUrl + url;
+    }
   }
 }
 
@@ -58,6 +61,7 @@ function callServer(options, success, that) {
   axios(options).then((respose) => {
     handler(respose, success)
   }).catch(reason => {
+    console.log(reason)
     that.$message.error("" + reason);
   })
 }
