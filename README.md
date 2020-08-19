@@ -31,11 +31,11 @@ yarn serve
 yarn build
 ```
 ## 调整后的截图
-![UI布局](http://47.108.140.13/images/pic1.jpg?raw=true)
+![UI布局](http://47.108.140.13/images/pic11.jpg?raw=true)
 ---
-![UI布局](http://47.108.140.13/images/pic2.jpg?raw=true)
+![UI布局](http://47.108.140.13/images/pic12.jpg?raw=true)
 ---
-![UI布局](http://47.108.140.13/images/pic3.jpg?raw=tru)
+![UI布局](http://47.108.140.13/images/pic13.jpg?raw=tru)
 ---
 
 ## 在线demo
