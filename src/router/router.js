@@ -19,7 +19,7 @@ export const otherRouter = [{
         notCache: true,
         icon: 'md-home'
       },
-      component: () => import('../views/process/design')
+      component: () => import('../views/index/index')
     }
   ]
 }]
@@ -79,7 +79,7 @@ export const appRouter = [{
       path: 'inst',
       icon: 'el-icon-s-claim',
       name: 'inst',
-      title: '流程实例',
+      title: '请假申请',
       component: () =>
         import ('../views/process/inst')
     }]

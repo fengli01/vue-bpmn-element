@@ -35,6 +35,8 @@ yarn build
 ---
 ![UI布局](http://47.108.140.13/images/pic2.jpg?raw=true)
 ---
+![UI布局](http://47.108.140.13/images/pic3.jpg?raw=tru)
+---
 
 ## 在线demo
 ##### 在线demo: [http://47.108.140.13/bpmn/](http://47.108.140.13/bpmn/)

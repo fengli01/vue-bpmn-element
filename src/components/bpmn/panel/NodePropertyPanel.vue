@@ -85,23 +85,23 @@
             value: "${assignee}",
             label: "表达式"
           }, {
-            value: "zhangsan",
+            value: "1001",
             label: "张三"
           }, {
-            value: "lisi",
+            value: "1002",
             label: "李四"
           }, {
-            value: "wangwu",
+            value: "1003",
             label: "王五"
           }],
           candidateUsers:[{
-            value: "zhangsan",
+            value: "1001",
             label: "张三"
           }, {
-            value: "lisi",
+            value: "1002",
             label: "李四"
           }, {
-            value: "wangwu",
+            value: "1003",
             label: "王五"
           }],
           roles: [

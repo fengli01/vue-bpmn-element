@@ -12,7 +12,14 @@
             </template>
           </div>
           <div v-else>
-            <span v-if="!item.formatter">{{scope.row[item.key]}}</span>
+            <span v-if="!item.formatter">
+              <template v-if="item.type">
+                {{item.type=='date'?dateFormat(scope.row[item.key],"YYYY-MM-DD"):dateFormat(scope.row[item.key])}}
+              </template>
+              <template v-else>
+                {{scope.row[item.key]}}
+              </template>
+            </span>
             <span v-else v-html="item.formatter(scope.row,item.key,scope.row[item.key],index)"></span>
           </div>
         </template>

@@ -34,6 +34,9 @@ export default {
       }
       callServer(_options, success, this);
     }
+    Vue.prototype.getCallUrl = function (url) {
+      return baseUrl + url;
+    }
   }
 }
 

@@ -56,7 +56,6 @@
             name: "删除",
             type: "text",
             click: (row) => {
-              console.log(row);
               this.delete(this.Apis.processRemove.replace("${id}", row.id), {}, res => {
                 console.log(res)
                 if (res.code == 200) {

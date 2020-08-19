@@ -36,6 +36,22 @@ const store = new Vuex.Store({
       password: "123456",
       nickName: "周八"
     }],
+    leaveCategorys: [{
+      value: 1,
+      label: "年休假"
+    }, {
+      value: 2,
+      label: "调休假"
+    }, {
+      value: 3,
+      label: "事假"
+    }, {
+      value: 4,
+      label: "婚假"
+    }, {
+      value: 5,
+      label: "妇产陪护假"
+    }],
     menuList: appRouter
   },
   getters: {
@@ -44,6 +60,9 @@ const store = new Vuex.Store({
     },
     getMenuList: state => {
       return state.menuList
+    },
+    getLeaveCategoryList: state => {
+      return state.leaveCategorys
     }
   }
 })

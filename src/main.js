@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import dateUtil from './libs/dateUtil'
 import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
@@ -17,7 +18,7 @@ import './assets/css/element-ui.css'
 import './assets/css/iconfont.css'
 
 Vue.config.productionTip = false
-Vue.use(http).use(ElementUI)
+Vue.use(http).use(ElementUI).use(dateUtil)
 Vue.prototype.Apis = Apis
 new Vue({
   render: h => h(App),
