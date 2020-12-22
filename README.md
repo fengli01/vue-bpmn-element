@@ -15,7 +15,7 @@
 this.modeler.on("selection.changed", e => {
   // TODO
 })
-// 监听内容变化事件，改变属性烂的值
+// 监听内容变化事件，改变属性栏的值
 this.modeler.on("element.changed", e => {
   // TODO
 })
