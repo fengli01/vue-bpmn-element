@@ -60,6 +60,12 @@
           moddleExtensions: _moddleExtensions
         });
 
+        /*let _tag = document.getElementsByClassName("djs-overlay-container")[0];
+        if (_tag) {
+          _tag.style.width = "100%";
+          _tag.style.height = "100%";
+        }*/
+
         // 初始化建模器内容
         this.initDiagram(this.initTemplate);
       },
@@ -67,6 +73,11 @@
         this.bpmnModeler.importXML(xml, err => {
           if (err) {
             // this.$Message.error("打开模型出错,请确认该模型符合Bpmn2.0规范");
+          }
+          let _tag = document.getElementsByTagName("svg")[0];
+          if (_tag) {
+            _tag.style.width = "100%";
+            _tag.style.height = "700px";
           }
         });
       },
@@ -136,10 +147,6 @@
         this.$emit("processSave",data);
       },
       restart() {
-        let _tag = document.getElementsByClassName("djs-direct-editing-parent")[0];
-        if (_tag) {
-          _tag.style.display = "none";
-        }
         let processId = new Date().getTime();
         this.initTemplate = templateXml.initTemplate(processId)
         this.initData = {key: "process" + processId, name: "流程" + processId, xml: this.initTemplate}
