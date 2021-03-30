@@ -1,0 +1,82 @@
+let persons = [{
+  "avatarUrl": "http://www.gzsjyzx.com/uploadfile/photo/20210130052242584.jpg",
+  "birthday": "1998-12-17",
+  "email": "2275371288@qq.com",
+  "gender": "女",
+  "major": "小学教育",
+  "mobil": "18786557474",
+  "name": "王定美",
+  "qq": "2275371288",
+  "school": "琼台师范学院"
+}, {
+  "avatarUrl": "http://www.gzsjyzx.com/uploadfile/photo/20210122060814002.jpg",
+  "birthday": "2000-02-02",
+  "email": "",
+  "gender": "女",
+  "major": "小学教育英语",
+  "mobil": "15108563204",
+  "name": "曾前分",
+  "qq": "3068395202",
+  "school": "国际教育学院"
+}, {
+  "avatarUrl": "http://www.gzsjyzx.com/uploadfile/photo/20210121080803120.jpg",
+  "birthday": "1998-11-21",
+  "email": "2831183524@qq.com",
+  "gender": "女",
+  "major": "语文教育",
+  "mobil": "保密",
+  "name": "胡丽平",
+  "qq": "2831183524",
+  "school": "黔南民族幼儿师范高等专科学校"
+}, {
+  "avatarUrl": "http://www.gzsjyzx.com/uploadfile/photo/20210120002310400.jpg",
+  "birthday": "1997-01-02",
+  "email": "",
+  "gender": "女",
+  "major": "护理学",
+  "mobil": "保密",
+  "name": "李欢",
+  "qq": "",
+  "school": "邵阳学院"
+}, {
+  "avatarUrl": "http://www.gzsjyzx.com/uploadfile/photo/20210115231918931.jpg",
+  "birthday": "1998-12-30",
+  "email": "2503658179@qq.com",
+  "gender": "女",
+  "major": "汉语言文学",
+  "mobil": "15902597606",
+  "name": "刘丽珊",
+  "qq": "2503658179",
+  "school": "人文学院"
+}, {
+  "avatarUrl": "http://www.gzsjyzx.com/uploadfile/photo/20210112210721039.jpg",
+  "birthday": "1998-02-11",
+  "email": "1718675384@qq.com",
+  "gender": "女",
+  "major": "学前教育",
+  "mobil": "13721576124",
+  "name": "柳思",
+  "qq": "1718675384",
+  "school": "铜仁幼儿师范高等专科学校"
+}, {
+  "avatarUrl": "http://www.gzsjyzx.com/uploadfile/photo/20201228050528067.jpg",
+  "birthday": "1997-08-29",
+  "email": "1537347826@qq.com",
+  "gender": "女",
+  "major": "化学",
+  "mobil": "18786564552",
+  "name": "黄丽",
+  "qq": "1537357826",
+  "school": "湖北民族大学"
+}, {
+  "avatarUrl": "http://www.gzsjyzx.com/uploadfile/photo/20190520044448014.jpg",
+  "birthday": "1997-09-24",
+  "email": "1683173472@qq.com",
+  "gender": "女",
+  "major": "英语",
+  "mobil": "18230828575",
+  "name": "曾丹",
+  "qq": "1683173472",
+  "school": "外国语学院"
+}];
+export default persons;
