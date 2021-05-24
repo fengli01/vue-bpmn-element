@@ -52,9 +52,6 @@
       columns: Array
     },
     created() {
-      if (!this.pageSize) {
-        this.pageSize = 10;
-      }
       this.reload(this.page);
     },
     methods: {
