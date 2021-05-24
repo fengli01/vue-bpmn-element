@@ -26,9 +26,9 @@ this.modeler.on("element.click", e => {
 ```
 ## 安装运行
 ```
-yarn install
-yarn serve
-yarn build
+npm install
+npm run serve
+npm run build
 ```
 ## 调整后的截图
 ![UI布局](http://47.108.140.13/images/pic11.jpg?raw=true)
