@@ -25,10 +25,15 @@ this.modeler.on("element.click", e => {
 })
 ```
 ## 安装运行
-```
-npm install
+```shell
+# npm用户
+npm i # 或 npm install
 npm run serve
 npm run build
+# yarn用户
+yarn install
+yarn serve
+yarn build
 ```
 ## 调整后的截图
 ![UI布局](http://47.108.140.13/images/pic11.jpg?raw=true)
