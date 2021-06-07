@@ -1,18 +1,18 @@
 <template>
   <div>
     <el-form :inline="false"
-             :model="processData"
+             :model="localProcessData"
              label-width="100px"
              size="small"
              label-position="left">
       <el-form-item label="流程ID">
-        <el-input v-model="processData.key" @input="updateId"></el-input>
+        <el-input v-model="localProcessData.key" @input="updateId"></el-input>
       </el-form-item>
       <el-form-item label="流程名称">
-        <el-input v-model="processData.name" @input="updateName"></el-input>
+        <el-input v-model="localProcessData.name" @input="updateName"></el-input>
       </el-form-item>
       <el-form-item label="流程描述">
-        <el-input v-model="processData.description" @input="updateDesc"></el-input>
+        <el-input v-model="localProcessData.description" @input="updateDesc"></el-input>
       </el-form-item>
     </el-form>
   </div>
@@ -22,7 +22,9 @@
   export default {
     name: "ProcessProperty",
     data() {
-      return {}
+      return {
+        localProcessData:this.processData
+      }
     },
     props: {
       processData: {
