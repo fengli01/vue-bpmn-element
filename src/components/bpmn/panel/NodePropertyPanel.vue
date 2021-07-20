@@ -118,8 +118,7 @@
               label: "主管"
             }
           ]
-        },
-        localFormData:this.formData
+        }
       }
     },
     props: {
@@ -134,6 +133,13 @@
       formData:{
         type: Object,
         required: true
+      }
+    },
+    computed:{
+      localFormData:{
+        get(){
+          return this.formData
+        }
       }
     },
     watch:{
